@@ -22,7 +22,10 @@ response = json.loads(content)
 
 fb = Feedback()
 try:
-	
+    # 将搜索关键字补充进来
+	fb.add_item(query,
+        subtitle="Search taobao items on %s" % query,
+        arg=query)
 	for title,id in response['result']:
 	    #url = 's.taobao.com/search?q=%s&searcy_type=item&s_from=newHeader&source=&ssid=s5-e&search=y' % title
 	    #url.replace(' ', '_')
