@@ -7,6 +7,9 @@ import json
 import sys
 import re
 
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
 query = sys.argv[1]
 #query = '{query}'
 url = 'http://suggest.taobao.com/sug?code=utf-8&callback=KISSY.Suggest.callback&q=%s' % query;
